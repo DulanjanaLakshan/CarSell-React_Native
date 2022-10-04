@@ -5,11 +5,13 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
+  Alert,
 } from "react-native";
 
 import React from "react";
 
 const LoginScreen = () => {
+  const Login=()=>Alert.alert("Login")
   return (
     <View style={styles.pannel}>
       <View>
@@ -33,7 +35,7 @@ const LoginScreen = () => {
         />
       </View>
       <View style={styles.buttons}>
-        <TouchableOpacity style={styles.SingUpButton}>
+        <TouchableOpacity style={styles.SingUpButton} onPress={Login}>
           <Text style={styles.appButtonText}>Sing Up</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.LoginButton}>
