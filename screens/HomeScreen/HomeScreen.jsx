@@ -5,7 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 
@@ -14,18 +14,24 @@ const HomeScreen = () => {
     <View style={styles.home}>
       <View style={styles.navbar}>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Home</Text>
+          <Text style={styles.buttonText}>Uplode</Text>
         </TouchableOpacity>
         <Image
           source={require('../../assets/user_icon.png')}
           style={styles.icon}
         />
       </View>
-      <View style={styles.homeBody}>
+      <ScrollView style={styles.homeBody}>
         <View style={styles.item}></View>
         <View style={styles.item}></View>
         <View style={styles.item}></View>
-      </View>
+        <View style={styles.item}></View>
+        <View style={styles.item}></View>
+        <View style={styles.item}></View>
+        <View style={styles.item}></View>
+        <View style={styles.item}></View>
+        <View style={styles.item}></View>
+      </ScrollView>
     </View>
   );
 };
@@ -54,11 +60,8 @@ const styles = StyleSheet.create({
   },
   homeBody: {
     width: '100%',
-    height: '93%',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   button: {
     margin: 5,
@@ -70,11 +73,12 @@ const styles = StyleSheet.create({
   },
   item:{
     width: '90%',
-    height: '25%',
+    height: 200,
     borderColor: '#7f8c8d',
     borderRadius: 10,
     borderWidth: 1,
     marginTop:20,
+    marginLeft:20,
     position: 'relative'
   }
 });
